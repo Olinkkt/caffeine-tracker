@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sledovač kofeinu
 
-## Getting Started
+Aplikace Sledovač kofeinu je jednoduchá webová aplikace, která vám umožňuje sledovat váš denní příjem kofeinu. Pomocí této aplikace můžete snadno zaznamenávat množství kofeinu, které jste konzumovali, a sledovat, kolik kofeinu jste za den přijali.
 
-First, run the development server:
+## Funkce
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* Zaznamenávání nových záznamů o konzumaci kofeinu
+* Zobrazení celkového množství kofeinu za den
+* Možnost filtrování záznamů podle data a času
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Jak začít
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Otevřete aplikaci v prohlížeči.
+2. Klikněte na tlačítko "Přidat nový záznam" a vyplňte formulář s informacemi o konzumovaném kofeinu.
+3. Klikněte na tlačítko "Přidat" a váš záznam bude uložen.
+4. Záznamy můžete prohlížet na hlavní stránce aplikace.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologie
 
-## Learn More
+* Aplikace byla vytvořena pomocí technologií Next.js, React a TypeScript.
+* Používá se také knihovna Lucide pro ikony.
 
-To learn more about Next.js, take a look at the following resources:
+## Licence
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Tato aplikace je uvolněna pod licencí MIT.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Kontakt
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pokud máte nějaké dotazy nebo návrhy, neváhejte nás kontaktovat na [oliver@seidltech.cz](mailto:oliver@seidltech.cz).

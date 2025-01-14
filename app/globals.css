@@ -2,21 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +10,433 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  /* Gradient animation that's PURE FIRE! 🔥 */
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+
+  /* Smooth slide-in animation for our power-ups! */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Gradient animation keyframes looking CLEAN! */
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Slow spin animation for that extra SWAG! */
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Smooth fade-in animation */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .card-shadow {
+    box-shadow: var(--card-shadow);
+  }
+  
+  .card-shadow-hover {
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  /* CRAZY floating animation! 🎈 */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(1deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+
+  /* INSANE bounce + spin combo! 🌪️ */
+  .animate-bounce-spin {
+    animation: bounceSpin 2s infinite;
+  }
+
+  @keyframes bounceSpin {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-25%) rotate(180deg);
+    }
+  }
+
+  /* EPIC shining text effect! ✨ */
+  .animate-text-shine {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 4s linear infinite;
+  }
+
+  @keyframes shine {
+    from { -webkit-mask-position: 150%; }
+    to { -webkit-mask-position: -50%; }
+  }
+
+  /* WILD card hover effects! 🃏 */
+  .hover-wild {
+    transition: all 0.3s ease;
+  }
+
+  .hover-wild:hover {
+    transform: perspective(1000px) rotateX(10deg) rotateY(5deg) rotateZ(-5deg);
+    box-shadow: 
+      0 5px 15px rgba(0,0,0,0.3),
+      0 0 40px rgba(var(--primary), 0.2),
+      0 0 100px rgba(var(--secondary), 0.1);
+  }
+
+  /* SICK glitch effect for delete button! 🎮 */
+  .glitch-hover {
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .glitch-hover:hover {
+    animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+  }
+
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  /* Remove float animations and add these instead */
+
+  .animate-glitch {
+    animation: textGlitch 0.5s infinite;
+  }
+
+  @keyframes textGlitch {
+    0% {
+      transform: translate(0);
+      text-shadow: 
+        0 0 0 #ff00c1,
+        0 0 0 #00fff9,
+        0 0 0 #ff0000;
+    }
+    25% {
+      transform: translate(-2px, 2px);
+      text-shadow: 
+        -2px -2px 0 #ff00c1,
+        2px 2px 0 #00fff9,
+        -1px 1px 0 #ff0000;
+    }
+    50% {
+      transform: translate(2px, -2px);
+      text-shadow: 
+        2px -2px 0 #ff00c1,
+        -2px 2px 0 #00fff9,
+        1px -1px 0 #ff0000;
+    }
+    75% {
+      transform: translate(-2px, -2px);
+      text-shadow: 
+        -2px 2px 0 #ff00c1,
+        2px -2px 0 #00fff9,
+        1px 1px 0 #ff0000;
+    }
+    100% {
+      transform: translate(0);
+      text-shadow: 
+        0 0 0 #ff00c1,
+        0 0 0 #00fff9,
+        0 0 0 #ff0000;
+    }
+  }
+
+  /* Add this sick 3D card effect */
+  .group:hover .group-hover\:[transform\:translateZ\(20px\)] {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  /* Add this RGB outline effect for extreme caffeine levels */
+  @keyframes rgbOutline {
+    0% { box-shadow: 0 0 10px #ff0000; }
+    33% { box-shadow: 0 0 10px #00ff00; }
+    66% { box-shadow: 0 0 10px #0000ff; }
+    100% { box-shadow: 0 0 10px #ff0000; }
+  }
 }
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 255 115 179;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 259 94% 61%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --progress-low: 142 76% 36%;
+    --progress-medium: 35 92% 51%;
+    --progress-high: 13 93% 55%;
+    --progress-max: 262 83% 58%;
+    --radius: 1rem;
+    --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 262 83% 3%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 259 94% 61%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 262 83% 58%;
+    --input: 0 0% 14.9%;
+    --ring: 262 83% 58%;
+    --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+    --card-shadow-hover: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Add these sick toast animations */
+@keyframes toastIn {
+  from {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.toast-animation {
+  animation: toastIn 0.3s ease-out forwards;
+}
+
+/* Add these somewhere in your CSS */
+[data-sonner-toast] {
+  @apply rounded-xl border-2 border-primary/20 backdrop-blur-sm;
+  animation: toastIn 0.3s ease-out forwards;
+}
+
+[data-sonner-toast][data-type="success"] {
+  @apply bg-gradient-to-r from-green-500/10 to-emerald-500/10;
+}
+
+[data-sonner-toast][data-type="error"] {
+  @apply bg-gradient-to-r from-red-500/10 to-rose-500/10;
+}
+
+/* Super crazy animations! 🎨 */
+@keyframes shake {
+  0%, 100% { transform: translateX(0) rotate(0); }
+  25% { transform: translateX(-5px) rotate(-5deg); }
+  75% { transform: translateX(5px) rotate(5deg); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+@keyframes spin-glow {
+  0% {
+    transform: rotate(0);
+    filter: drop-shadow(0 0 5px currentColor);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: drop-shadow(0 0 20px currentColor);
+  }
+}
+
+@keyframes text-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-shake {
+  animation: shake 0.5s infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 0.3s infinite;
+}
+
+.animate-spin-glow {
+  animation: spin-glow 2s linear infinite;
+}
+
+.animate-text-flicker {
+  animation: text-flicker 0.2s infinite;
+}
+
+.animate-rgb-shadow {
+  animation: rgbShadow 2s infinite;
+}
+
+.animate-rgb-shadow-intense {
+  animation: rgbShadowIntense 1s infinite;
+}
+
+@keyframes rgbShadow {
+  0% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); }
+  33% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); }
+  66% { box-shadow: 0 0 20px rgba(0, 0, 255, 0.5); }
+  100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); }
+}
+
+@keyframes rgbShadowIntense {
+  0% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.8); }
+  33% { box-shadow: 0 0 30px rgba(0, 255, 0, 0.8); }
+  66% { box-shadow: 0 0 30px rgba(0, 0, 255, 0.8); }
+  100% { box-shadow: 0 0 30px rgba(255, 0, 0, 0.8); }
+}
+
+/* Mega glitch effect for extreme caffeine! ⚡️ */
+.animate-mega-glitch {
+  animation: megaGlitch 0.3s infinite;
+}
+
+@keyframes megaGlitch {
+  0% {
+    text-shadow: 
+      2px 2px #ff0000,
+      -2px -2px #00ff00;
+    transform: translate(0);
+  }
+  25% {
+    text-shadow: 
+      -2px -2px #ff0000,
+      2px 2px #00ff00;
+    transform: translate(-2px, 2px);
+  }
+  50% {
+    text-shadow: 
+      2px -2px #ff0000,
+      -2px 2px #00ff00;
+    transform: translate(2px, -2px);
+  }
+  75% {
+    text-shadow: 
+      -2px 2px #ff0000,
+      2px -2px #00ff00;
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    text-shadow: 
+      2px 2px #ff0000,
+      -2px -2px #00ff00;
+    transform: translate(0);
+  }
+}
+
+/* Unique animations for each drink type! 🎨 */
+@keyframes rocket {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(180deg); }
+}
+
+@keyframes zap {
+  0% { filter: brightness(1); transform: scale(1); }
+  50% { filter: brightness(1.5); transform: scale(1.2); }
+  100% { filter: brightness(1); transform: scale(1); }
+}
+
+@keyframes atom {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.3); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes bomb {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); filter: hue-rotate(180deg); }
+  100% { transform: scale(1); }
+}
+
+.animate-rocket { animation: rocket 1s infinite; }
+.animate-zap { animation: zap 1s infinite; }
+.animate-atom { animation: atom 2s infinite; }
+.animate-bomb { animation: bomb 0.5s infinite; }
