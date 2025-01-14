@@ -144,25 +144,6 @@ export function CaffeineForm() {
     return 'Volume (ml)'
   }
 
-  const calculateCaffeine = (drinkName: string, amount: string) => {
-    const lowercaseName = drinkName.toLowerCase()
-    for (const [name, config] of Object.entries(DRINK_MAPPINGS)) {
-      if (
-        lowercaseName.includes(name) || 
-        config.aliases.some(alias => lowercaseName.includes(alias))
-      ) {
-        if (amount) {
-          if (config.isPowder && config.caffeinePerGram) {
-            return Math.round(parseFloat(amount) * config.caffeinePerGram).toString()
-          } else {
-            return Math.round(parseFloat(amount) * config.caffeinePerMl).toString()
-          }
-        }
-      }
-    }
-    return ''
-  }
-
   const handleSuggestionClick = (suggestion: string) => {
     console.log('🎯 Suggestion clicked:', suggestion)
     setName(suggestion)

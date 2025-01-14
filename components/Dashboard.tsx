@@ -5,11 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { getCaffeineIntakes, CaffeineIntake } from '@/lib/caffeineStorage'
 import { Progress } from "@/components/ui/progress"
 import { 
-  Bomb, Flame, Zap, Rocket, 
-  Sparkles, Star, PartyPopper, 
-  Skull, Coffee, Dumbbell, 
-  Droplet, Atom, Beef,
-  FlaskConical
+  Bomb, Rocket, Skull, Coffee
 } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { toast } from "@/hooks/use-toast"

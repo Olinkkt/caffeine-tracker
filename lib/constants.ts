@@ -1,13 +1,20 @@
+import type { LucideIcon } from 'lucide-react'
 import { 
-  Bomb, Flame, Zap, Rocket, 
-  Sparkles, Star, PartyPopper, 
-  Skull, Coffee, Dumbbell, 
-  Droplet, Atom, Beef,
+  Bomb,
+  Flame,
+  Rocket,
+  Sparkles,
+  Star,
+  PartyPopper,
+  Dumbbell,
+  Droplet,
+  Atom,
+  Beef,
   FlaskConical
 } from 'lucide-react'
 
 export type DrinkConfig = {
-  icon: any;
+  icon: LucideIcon;
   aliases: string[];
   caffeinePerMl: number;
   defaultVolume: number;
